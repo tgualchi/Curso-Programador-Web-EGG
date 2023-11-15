@@ -1,0 +1,396 @@
+/* Estilos generales */
+body {
+    background-image: url('img/fondo.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+/* Menú hamburguesa */
+#check {
+    display: none;
+}
+
+.checkbtn {
+    font-size: 25px;
+    color: white;
+    float: right;
+    line-height: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+/* Lista del encabezado */
+ol, ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+header a {
+    color: white;
+}
+
+header p {
+    display: flex;
+    margin: 7px;
+    float: left;
+}
+
+a i.fa-brands.fa-whatsapp {
+    position: fixed;
+    bottom: 22px;
+    right: 35px;
+    font-size: 3em;
+    border-radius: 10px;
+}
+
+.fa-brands.fa-whatsapp:hover {
+    transform: scale(2.00);
+}
+
+/* Sombra neonada de las listas del encabezado */
+.neon {
+    display: flex;
+    box-sizing: border-box;
+    padding: 25px;
+    border: none;
+    font: normal 48px/normal "Warnes", Helvetica, sans-serif;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    text-overflow: clip;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1),
+                 0 0 20px rgba(255, 255, 255, 1),
+                 0 0 30px rgba(255, 255, 255, 1),
+                 0 0 40px #ff00de,
+                 0 0 70px #ff00de,
+                 0 0 80px #ff00de,
+                 0 0 100px #ff00de;
+    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.neon:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1),
+                 0 0 20px rgba(255, 255, 255, 1),
+                 0 0 30px rgba(255, 255, 255, 1),
+                 0 0 40px #00ffff,
+                 0 0 70px #00ffff,
+                 0 0 80px #00ffff,
+                 0 0 100px #00ffff;
+    transform: scale(2.00);
+}
+
+/* Estilo de las letras de las listas del encabezado */
+header nav ul li p {
+    font-size: 15px;
+    font-family: 'Roboto Mono', monospace;
+    padding: 1px;
+    line-height: 0;
+}
+
+/* Acerca de mí, foto de perfil y botón de LinkedIn */
+main {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 200px;
+    margin-top: 100px;
+}
+
+/* Parte de abajo */
+footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+.brillo {
+    box-shadow: 0 0 20px #4f9;
+    border-radius: 30px;
+}
+
+.brillo:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1),
+                  0 0 20px rgba(255, 255, 255, 1),
+                  0 0 30px rgba(255, 255, 255, 1),
+                  0 0 40px #00ffff,
+                  0 0 70px #00ffff,
+                  0 0 80px #00ffff,
+                  0 0 100px #00ffff;
+    transform: scale(2.00);
+}
+
+footer nav {
+    display: flex;
+}
+
+footer p {
+    font: 140% sans-serif;
+    font-family: 'Alumni Sans Inline One', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
+
+footer nav ul {
+    display: flex;
+}
+
+footer nav ul li a i {
+    color: rgb(245, 239, 239);
+    padding: 5px;
+    line-height: 5px;
+    font-size: 30px;
+}
+
+/* Zona de fotos */
+section {
+    display: flex;
+}
+
+.seccion-1 {
+    display: flex;
+    margin: 20%;
+    font-family: 'Alumni Sans Inline One', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    color: #eff5ef;
+    background-color: rgba(49, 49, 134, 0.719);
+    box-shadow: 0 0 20px #4f9;
+    border-radius: 30px;
+}
+
+.fotoporfil img {
+    width: 70%;
+    display: flex;
+    margin: 20%;
+    border-radius: 10px;
+}
+
+/* Botón de LinkedIn */
+:root {
+    --bg: #3C465C;
+    --primary: #78FFCD;
+    --solid: #fff;
+    --btn-w: 5em;
+    --dot-w: calc(var(--btn-w) * .2);
+    --tr-X: calc(var(--btn-w) - var(--dot-w));
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.btn {
+    display: flex;
+    margin-top: 50%;
+    position: relative;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 0.15em solid var(--primary);
+    border-radius: 5em;
+    text-align: center;
+    font-size: 1.3em;
+    line-height: 1em;
+    cursor: pointer;
+}
+
+.dot {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: var(--dot-w);
+    height: 100%;
+    border-radius: 100%;
+    transition: all 300ms ease;
+    display: none;
+}
+
+.dot:after {
+    content: '';
+    position: absolute;
+    left: calc(50% - .4em);
+    top: -.4em;
+    height: .8em;
+    width: .8em;
+    background: var(--primary);
+    border-radius: 1em;
+    border: .25em solid var(--solid);
+    box-shadow: 0 0 .7em var(--solid), 0 0 2em var(--primary);
+}
+
+.btn:hover .dot,
+.btn:focus .dot {
+    animation: Linkedin 2s infinite linear;
+    display: block;
+}
+
+@keyframes Linkedin {
+    0% {
+        transform: translateX(0) rotate(0);
+    }
+    30% {
+        transform: translateX(var(--tr-X)) rotate(0);
+    }
+    50% {
+        transform: translateX(var(--tr-X)) rotate(180deg);
+    }
+    80% {
+        transform: translateX(0) rotate(180deg);
+    }
+    100% {
+        transform: translateX(0) rotate(360deg);
+    }
+}
+
+/* Estilos de letra y sombra de Acerca de mí */
+.acerca-de {
+    text-align: center;
+    margin: 8%;
+    text-shadow: 0 0 30px #fff;
+}
+
+.acerca-de:hover {
+    background: #a945c7be;
+    box-shadow: 0 0 20px #a945c7be, 0 0 40px #a945c7be,
+        0 0 80px #a945c7be;
+    transition-delay: 0.5s;
+    border-radius: 30px;
+}
+
+article {
+    display: flex;
+    margin-bottom: 200px;
+}
+
+article h2 {
+    padding: 10px;
+    display: flex;
+    font-family: 'Alumni Sans Inline One', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.tarjetas {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 20px;
+    width: 100%;
+    gap: 25px;
+}
+
+.tarjeta {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.tarjeta img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10%;
+    flex-wrap: wrap;
+}
+
+.tarjeta img:hover {
+    transform: scale(1.15);
+}
+
+@media (max-width: 768px) {
+    .tarjeta {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        padding: 30px;
+    }
+
+    .tarjetas {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+
+    .seccion-1 {
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+    }
+
+   
+    @media (max-width: 768px) {
+        header {
+            background-color: blueviolet;
+            display: block;
+            text-align: center;
+        }
+    
+        header a {
+            display: block;
+            margin: 10px 0;
+            font-size: 20px;
+        }
+    
+        header nav ul {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        #check:checked ~ ul {
+            background-color: rgba(49, 49, 134, 0.719);
+            left: 0;
+            bottom: 0;
+            display: flex;
+            padding: 0px;
+            flex-direction: column;
+            box-shadow: 0 0 20px #4f9;
+            border-radius: 30px;
+            margin: 0;
+        }
+
+        #check:checked ~ .checkbtn {
+            color: black;
+        }
+    
+        .checkbtn {
+            display: block;
+            margin-right: 8%;
+        }
+    
+        #encabezado ul {
+            position: absolute;
+            text-align: center;
+            align-items: center;
+            left: 71%;
+            transition: all 0.5s;
+        }
+    
+        #encabezado nav ul li {
+            display: block;
+            margin: 20px 0;
+            line-height: 30px;
+        }
+    }
+}    
