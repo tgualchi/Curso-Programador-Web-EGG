@@ -23,3 +23,6 @@ function cambiarTexto1 (nombreApellido) {
 
 parrafo2.innerText = cambiarTexto (estudio, lugarDeEstudio);
 parrafo1.innerText = cambiarTexto1 (nombreApellido);
+
+
+
