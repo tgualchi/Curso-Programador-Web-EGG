@@ -12,6 +12,20 @@ body {
 }
 
 
+/* ICONO DE WHATSAPP  */
+
+a i.fa-brands.fa-whatsapp {
+    position: fixed;
+    bottom: 22px;
+    right: 35px;
+    font-size: 3em;
+    border-radius: 10px ;
+}
+.fa-brands.fa-whatsapp:hover { 
+transform: scale(2.00);
+}
+
+
 
 /* MENU DE HAMBURGESA*/
 
@@ -48,7 +62,7 @@ a {
 }
 
 
-header  {
+#encabezado  {
     display: flex;
   
     align-items: center;
@@ -58,33 +72,27 @@ header  {
    
 }
 
-
-header a  {
+#encabezado a {
     color: white;
-    
 }
-header p {
-    display: flex;
+
+
+#encabezado p {
+    
     margin: 7px;
     float: left;
-    
-}
+    font-size: 15px;
+    font-family: 'Roboto Mono', monospace;
+    padding: 1px;
+    line-height:0%;
 
-a i.fa-brands.fa-whatsapp {
-    position: fixed;
-    bottom: 22px;
-    right: 35px;
-    font-size: 3em;
-    border-radius: 10px ;
-}
-.fa-brands.fa-whatsapp:hover { 
-transform: scale(2.00);
+    
 }
 
 /* SOMBRA NEONADA DE LAS LISTAS DEL HEDER */
 
 .neon{
-    display: flex;
+    
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -115,17 +123,6 @@ header nav ul{
     display: flex;
     
 }
-
-/* ESTILO DE LAS LETRAS DE LAS LISTS DEL HEDER */
-
-header nav ul li p {
-font-size: 15px;
-font-family: 'Roboto Mono', monospace;
-padding: 1px;
-line-height:0%;
-
-}
-
 /* HACERCA DE MI FOTO PERFIL Y BOTON DE LINK */
 
 main {
@@ -134,6 +131,7 @@ main {
     justify-content: space-around;
  
 }
+
 
 /* PARTE DE ABAJO */
 
@@ -346,109 +344,6 @@ font-family: 'Roboto Mono', monospace;
     transform: scale(1.15);
 }
 
-/* ------------- CSS General ------------- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    color: #5d6063;
-    background-color: #eaedf0;
-    font-family: "Helvetica", "Arial", sans-serif;
-    font-size: 16px;
-  }
-  
-  /* ------------- Encabezado Contacto ------------- */
-  
-  
-  
-
-  
-  /* ------------- Formulario ------------- */
-  
-  .formulario {
-    background-color: #f6f7f849;
-    border: 1px solid #d6d9dc;
-    border-radius: 3px;
-  
-    width: 35%;
-    padding: 50px;
-    margin: 30px 0 40px 0;
-  }
-
-  /* ------------- Campos del Formulario ------------- */
-
-.form-row {
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-  
-  .form-row input[type="text"],
-  .form-row input[type="email"] {
-    background-color: #bdbdbd;
-    border: 0;
-    border-radius: 6px;
-    width: 100%;
-    padding: 7px;
-    font-size: 14px;
-  }
-  
-  .form-row label {
-    margin-bottom: 3px;
-    text-align: initial;
-  }
-
-  .form-row textarea {
-    font-family: "Helvetica", "Arial", sans-serif;
-    font-size: 14px;
-  
-  
-    background-color: #bdbdbd;
-    border: 0;
-    border-radius: 6px;
-  
-  
-    min-height: 200px;
-    margin-bottom: 10px;
-    padding: 7px;
-    resize: none;
-  
-  
-    width: 100%;
-  }
-
-  .form-row button {
-    font-size: 16px;
-    font-weight: bold;
-  
-  
-    color: #ffffff;
-    background-color: #5995da;
-  
-  
-    border: none;
-    border-radius: 3px;
-  
-  
-    padding: 10px 40px;
-    cursor: pointer;
-  }
-  
-  
-  .form-row button:hover {
-    background-color: #76aeed;
-  }
-  
-  
-  .form-row button:active {
-    background-color: #407fc7;
-  }
-  
 
 /* PANTALLA DE CELULAR */
 
@@ -469,116 +364,73 @@ font-family: 'Roboto Mono', monospace;
         display: flex;
         flex-direction: column;
         width: 75%;
- }
+    }
 
-header {
-        background-color: blueviolet;
+    /* DESAPARECE LA AMBURGESA*/
+    .checkbtn {
+        display: block;
+    }
+
+    #encabezado ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #3c465cc7;
+        text-align: center;
        
-}
+        left: 100%;
+        transition: all 1s;
+    }
 
+    #check:checked ~ ul {
+        left: 0%;
+        display: block;
+    }
 
-.menu {
- display: none;
- width: fit-content;
- text-align: center;
+    #encabezado nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
 
-}
+    #encabezado nav ul li a {
+        font-size: 20px;
+    }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    height: 0;
-    align-items: center;
+    #check:checked ~ .checkbtn{
+        color: #ff00de;
+    }
 
-}
+    ul.menu{
+    padding: 0%;
+    }
 
-:root {
-    --bg: #3C465C;
-    --primary: #78FFCD;
-    --solid: #fff;
-    --btn-w: 5em;
+    .btn {
+        margin-top: 10%; 
+        display: block;
+        justify-content: space-around;
+    }
+
+    span{
+        width: 10px;
+        text-align: center;
+        font-size: 1.3em;
+        line-height: 1em;
     
-    --tr-X: calc(var(--btn-w) - var(--dot-w));
-  }
+    }
 
-
-#check:checked ~ ul {
-    background-color: rgba(49, 49, 134, 0.719);
-    left: 24%;
-    bottom: 78%;
-    display: flex;
-    padding: 0px;
-    position: absolute;
-    
-    box-shadow: 0 0 20px #4f9;
-    border-radius: 30px;
-    margin-left: 0%;
-    margin-bottom: 0%;
-    margin-top: 0%;
-    flex-wrap: nowrap;
-    align-items: center;
-}
-
-.checkbtn {
-    display: block;
-    
-}
-
-#encabezado {
-    height: 60px;
-    
-
-}
-
-#encabezado nav ul li {
-    display: block;
-    margin: 50px 0;
-    line-height: 30px;
+    .btn:hover .dot,
+    .btn:focus .dot {
   
-}
+     display: none;
 
+    }
 
-#encabezado nav ul li a {
-    font-size: 20px;
-    
-}
-
-.conteiner {
-    width: 100%;
-}
-
-.btn {
-    margin-top: 10%; 
-    display: block;
-    justify-content: space-around;
-}
-
-span{
-    width: 10px;
-    text-align: center;
-    font-size: 1.3em;
-    line-height: 1em;
-    
-}
-
-.dot{
-    display: none;
-}
-
-.btn:hover .dot, .btn:focus .dot {
-    animation: Linkedin 5s infinite linear;
-    display: block;
-}
-
-
-
-.neon {
-    display: flex;
+    .neon {
+   
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 0px;
-    border: none;
     font: normal 48px/normal "Warnes", Helvetica, sans-serif;
     color: rgba(255,255,255,1);
     text-align: center;
@@ -589,30 +441,16 @@ span{
     -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
     -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
     transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-}
-.form-header {
-    padding: 50px;
-  }
-
-  .form-row {
-    flex-direction: row;
-    align-items: flex-start;
-    margin-bottom: 20px;
-  }
-  .form-row input[type="text"] {
-    width: 250px;
-    height: initial;
-  }
-  .form-row label {
-    
-    width: 120px;
-    margin-top: 7px;
-    padding-right: 20px;
-  }
-
-  .form-row textarea {
-      width: 250px;
     }
+   
+    #encabezado p {
+        margin: 0px;
+        font-size: 20px;
+        padding: 0;
+        float: none;
+    }
+
+
 
  
 }
