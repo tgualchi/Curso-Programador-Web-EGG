@@ -1,14 +1,15 @@
-const form = document.getElementById("form");
+const formulario = document.getElementById("contactForm");
 const nombre = document.getElementById("nombre");
 const parrafo = document.getElementById("alertas");
 
-function validarFormulario() {
+function validarFormulario(e) {
+  e.preventDefault();
   let warnings = "";
   let valido = true;
   parrafo.innerHTML = "";
 
   if (nombre.value.length < 4) {
-    warnings += `El nombre debe contener más de 4 carcateres`;
+    warnings += `El nombre debe contener más de 4 caracteres`;
     valido = false;
   }
 
@@ -16,15 +17,8 @@ function validarFormulario() {
     parrafo.innerHTML = warnings;
   } else {
     parrafo.innerHTML = "Enviado";
+    formulario.submit();
   }
-  return valido;
 }
 
-form.addEventListener("submit", (e) => {
-  if (validarFormulario()) {
-    // Si la validación es exitosa, puedes enviar el formulario
-    formulario.submit();
-  } else {
-    e.preventDefault(); // Evita que el formulario se envíe automáticamente
-  }
-});
+formulario.addEventListener("submit", validarFormulario);

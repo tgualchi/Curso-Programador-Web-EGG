@@ -7,33 +7,30 @@
     <link rel="stylesheet" href="StylesFormulario.css">
 </head>
 <body>
-    <form action="" method="get" class="formulario" id="form">
-        <div class="form-row">
-            <label for="nombre">Nombre</label>
-            <input 
-              id="nombre" 
-              name="nombre" type="text"
-              placeholder="nombre" />
-            <div class="form-row">
-                <label for="email">Email</label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  placeholder="@gmail.com"
-                />
-              </div>
-          </div>
-          <div class="form-row">
-            <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje"></textarea>
-          </div>
-          <div class="form-row">
-            <button type="submit" id="submit">Enviar</button>
-          </div>
-          <p class="alertas" id="alertas"></p>
-      </form>
+    <div id="formulario" class="contactBody">   
+        <div class="wrapper">
+            <div class="title">
+                <h2>Contact Form</h2>
+            </div>
+  
+            <form class="form" id="contactForm" action="process_form.php" method="post">
+                <input type="text" class="name entry" id="nombre" name="name" placeholder="Your Name"/>
+                <input type="text" class="email entry" name="email" placeholder="Email"/>
+                <textarea class="message entry" name="message" placeholder="Message"></textarea> 
+                
+                <button type="submit" class="submit entry">Submit</button>
+                
+                
+            </form>  
 
-      <script src="scriptFormulario.js"></script>  
+            <div id="alertas" class="alertas"></div>
+            <div class="shadow"></div>
+        </div>
+    </div>
+
+    <script src="scriptFormulario.js"></script>  
 </body>
 </html>
+
+
+ 

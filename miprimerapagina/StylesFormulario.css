@@ -1,168 +1,239 @@
-/* ------------- CSS General ------------- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+/* FORMULARIO */
+
+.contactBody{
   
-  body {
-    color: #5d6063;
-    background-color: #eaedf0;
-    font-family: "Helvetica", "Arial", sans-serif;
-    font-size: 16px;
-  }
-  
-  /* ------------- Encabezado Contacto ------------- */
-  
-  footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .form-header {
+    background-size: cover;
+    background-attachment: fixed;
+    height:700px;
+
+}
+.title{
+    margin: 0 auto;
+    width: 50%;
     text-align: center;
-    background-color: #f6f7f8;
-    border: 1px solid #d6d9dc;
-    border-radius: 3px;
-  
+    padding-bottom: 10px;
+    font-size: 42px;
+    color: rgb(252, 252, 252);
+  }
+
+  #title-Tag-Line{
+      font-size: 20px;
+  }
+/* This will center the form */
+  .wrapper {
     width: 80%;
-    margin: 10px auto;
-    padding: 50px;
-  }
-  
-  .form-header h1 {
-    font-size: 30px;
-    margin-bottom: 20px;
-  }
-  
-  /* ------------- Formulario ------------- */
-  
-  .formulario {
-    background-color: #f6f7f8;
-    border: 1px solid #d6d9dc;
-    border-radius: 3px;
-  
-    width: 35%;
-    padding: 50px;
-    margin: 30px 0 40px 0;
+    height: 50%;
+    margin: 5% auto 0 auto; 
   }
 
-  /* ------------- Campos del Formulario ------------- */
-
-.form-row {
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    flex-wrap: wrap;
+/* form animation starts */
+  .form {
+    background: #ebebeb;
+    text-align: center; 
+    box-shadow: 0px 0px 20px 5px #AAA; 
+    border-radius: 10px;  
+    width: 45%; 
+    height: 400px;
+    margin: 30px auto 0 auto;
+    padding: 10px 10px;  
+    animation: bounce 1.5s infinite;
   }
 
-
-  input#nombre {
-    background-color: #bdbdbd;
-    border: 0;
-    border-radius: 6px;
-    width: 81%;
-    padding: 7px;
-    font-size: 14px;
+.name { 
+    background-color: #e9b935;
+    border-bottom: 5px solid rgb(178, 168, 23);
+    color: white;
+    width:300px;
   }
 
-  
-  .form-row input[type="text"],
-  .form-row input[type="email"] {
-    background-color: #bdbdbd;
-    border: 0;
-    border-radius: 6px;
-    width: 100%;
-    padding: 7px;
-    font-size: 14px;
+  ::-webkit-input-placeholder{
+      color: white;
+      font-size: 20px;
   }
-  
-  .form-row label {
-    margin-bottom: 3px;
-    text-align: initial;
+  .name:hover{
+    background-color: #00b445;
+    border-bottom: 5px solid #048504;
+    height:30px;
+    width:400px;
   }
 
-  .form-row textarea {
-    font-family: "Helvetica", "Arial", sans-serif;
-    font-size: 14px;
-  
-  
-    background-color: #bdbdbd;
-    border: 0;
-    border-radius: 6px;
-  
-  
-    min-height: 200px;
-    margin-bottom: 10px;
-    padding: 7px;
-    resize: none;
-  
-  
-    width: 100%;
+  .email {
+    background-color: #00b445;  
+    border-bottom: 5px solid #502789;
+    height:50px;
+    width:300px;
+    
   }
-
-  .form-row button {
-    font-size: 16px;
-    font-weight: bold;
-  
-  
-    color: #ffffff;
-    background-color: #5995da;
-  
-  
-    border: none;
-    border-radius: 3px;
-  
-  
-    padding: 10px 40px;
-    cursor: pointer;
-  }
-  
-  
-  .form-row button:hover {
-    background-color: #76aeed;
-  }
-  
-  
-  .form-row button:active {
-    background-color: #407fc7;
-  }
-
-  form#form.formulario {
-    margin-left: 31%;
-  }
-  
-
-
-
-
-  /* ------------- Para Pantallas de más de 700px ------------- */
-@media only screen and (min-width: 700px) {
-    .form-header {
-      padding: 50px;
-    }
-  
-    .form-row {
-      flex-direction: row;
-      align-items: flex-start;
-      margin-bottom: 20px;
-    }
-    .form-row input[type="text"] {
-      width: 250px;
-      height: initial;
-    }
-    .form-row label {
-      
-      width: 120px;
-      margin-top: 7px;
-      padding-right: 20px;
-    }
-
-    .form-row textarea {
-        width: 250px;
-      }
-
+  .email:hover{
+    background-color: #7239C1;  
+    border-bottom: 5px solid #502789;
+    height:30px;
+    width:380px;
    
+  }
+  .message {   
+    background-color: rgb(230, 108, 15);
+    border-bottom: 5px solid rgb(195, 35, 17);
+    overflow: hidden;
+    height: 100px;  
+    width:300px;
+  }
+
+  .message:hover{
+    background-color: #2DD7BB;
+    border-bottom: 5px solid #2BB09A;
+    height: 100px;
+    width:370px;
+  }
+
+  .submit{
+    border-radius:5px;
+    padding:10px;
+    background-color: #2DD7BB;  
+    border: none;
+    border-bottom: 5px solid #CB64B2; 
+    transform: translateY(-120px); 
+
+  }
+
+  .submit:hover{
+    border-bottom: 5px solid #CB64B2;  
+    box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);
+  }
+
+  .entry{
+    display: block;
+    margin: 30px auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    transition: all 0.5s ease 0s;
+    box-shadow: 0px 0px 25px 2px #AAA;  
+  }
+
+  /* Shadow to make it look like form is floating  */
+  .shadow{
+    box-shadow: 0px 0px 60px 5px #AAA;
+    opacity: 0.5;
+    border-radius: 100px;
+    width: 50%; 
+    margin: 50px auto 0 auto;
+    padding: 0 20px;  
+    animation: shadow 1.5s infinite;
+  }
+.submit{
+    border-radius:5px;
+    padding:10px;
+    width:150px;
+    color: white;
+    background-color: #EE78D1;  
+    border: none;
+    border-bottom: 5px solid #CB64B2; 
+    margin-top: 150px; 
+
+  }
+
+  .alertas {
+    font-size: 30px;
+  text-align: center;
+  margin-top: 12px;
+  color: red;
+}
+
+
+
+  @keyframes bounce{
+    0%{
+      
+    }
+    50%{
+      transform: translate(0, 8px);
+    }
+
+  }
+  @keyframes shadow{
+    0%{
+      
+    }
+    50%{
+      opacity: 0.8;
+      width: 50%;
+    }
+  }
+
+  @media (max-width: 898px) {
+    .name { 
+      background-color: #e9b935;
+      border-bottom: 5px solid rgb(178, 168, 23);
+      color: white;
+      width:200px;
+    }
+    .message {   
+      background-color: rgb(230, 108, 15);
+      border-bottom: 5px solid rgb(195, 35, 17);
+      overflow: hidden;
+      height: 100px;  
+      width:200px;
+    }
+    .email {
+      background-color: #00b445;  
+      border-bottom: 5px solid #502789;
+      height:50px;
+      width:200px;
+      
+    }
+  }
+
+  @media (max-width: 624px) {
+    .name { 
+      background-color: #e9b935;
+      border-bottom: 5px solid rgb(178, 168, 23);
+      color: white;
+      width:150px;
+    }
+    .message {   
+      background-color: rgb(230, 108, 15);
+      border-bottom: 5px solid rgb(195, 35, 17);
+      overflow: hidden;
+      height: 100px;  
+      width:150px;
+    }
+    .email {
+      background-color: #00b445;  
+      border-bottom: 5px solid #502789;
+      height:50px;
+      width:150px;
+      
+    }
+    .alertas {
+      font-size: 20px;
+    }
+
+  }
+
+  @media (max-width:   486px) {
+  .name{ 
+    background-color: #e9b935;
+    border-bottom: 5px solid rgb(178, 168, 23);
+    color: white;
+    width:115px;
+  }
+  .message {   
+    background-color: rgb(230, 108, 15);
+    border-bottom: 5px solid rgb(195, 35, 17);
+    overflow: hidden;
+    height: 100px;  
+    width:115px;
+  }
+  .email {
+    background-color: #00b445;  
+    border-bottom: 5px solid #502789;
+    height:50px;
+    width:115px;
+    
+  }
+  .alertas {
+    font-size: 20px;
+  }
+
 }
